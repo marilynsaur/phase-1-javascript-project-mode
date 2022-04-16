@@ -1,0 +1,162 @@
+html {
+    margin: 0;
+    font-family: "Gill Sans", sans-serif;
+    text-align: center;
+    color: #03194d;
+    background-color: rgb(233, 237, 241);
+}
+
+#train-header{
+ 
+  background-color:#0888f8;
+}
+
+h1{
+  
+  font-family: "Gill Sans", sans-serif;
+  color:grey;
+}
+
+h2 {
+ 
+  margin: 0px;
+  padding: 10px;
+  border: 1px solid;
+  background-color: whitesmoke;
+}
+/* .description {
+  margin: 0;
+  font-family: "Gill Sans", sans-serif;
+  text-align: center;
+  color: #3c3e44;
+} */
+.card {
+   
+    border: 1px solid;
+    text-align: center;
+    padding: 10px;
+    width: 300px;
+    display: inline-grid;
+    margin: 1rem 2rem;
+    box-shadow: 0 4px 8px 0 rgba(1, 6, 107, 0.5);
+    transition: 0.3s;
+    background-color:#0888f8;
+  }
+
+.title {
+  font-weight:bold;
+ 
+}
+
+.image {
+  
+  width:300px;
+}
+
+.train-avatar {
+  
+  justify-self: center;
+  height: 12rem;
+  width: auto;
+}
+
+.container {
+  border-radius: 25px;
+  margin: 0px;
+  padding: 10px;
+  border: 1px solid;
+  background-color: whitesmoke;
+}
+
+.fact {
+  font-style: italic;
+  
+}
+
+.list {
+  list-style: none;
+  padding: 0px;
+ 
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgb(1, 3, 98);
+}
+
+input {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    height: 2rem;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 18px;
+    justify-self: center;
+    font-family:  "Gill Sans", sans-serif;
+    margin: 3px;
+  }
+
+  label {
+  position: relative;
+  border-radius: 5px;
+  height: 2rem;
+  width: max-content;
+  color: grey;
+  font-size: 18px;
+  justify-self: center;
+  font-family:  "Gill Sans", sans-serif;
+  margin: 3px;
+
+}
+
+
+  /* textarea {
+    position: relative;
+    background-color: #0888f8;
+    border-radius: 5px;
+    height: 2rem;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 18px;
+    justify-self: center;
+    font-family:  "Gill Sans", sans-serif;
+    margin: 3px;
+  }
+
+  textarea:hover {
+    background-color: whitesmoke;
+    border: #044c24 solid 1px;
+    color: #0c52f6;
+  } */
+
+input:hover {
+    background-color: whitesmoke;
+    border: #044c24 solid 1px;
+    color: #0c52f6;
+  }
+  
+  .checked {
+    color: orange;
+  }
+
+form {
+  margin: 0px;
+  padding: 10px;
+  border: 1px solid;
+  background-color: white;
+}
+
+
+
+button {
+  position: relative;
+    background-color: #0888f8;
+    border-radius: 5px;
+    height: 2rem;
+    width: max-content;
+    color:whitesmoke;
+    font-size: 18px;
+    justify-self: center;
+    font-family:  "Gill Sans", sans-serif;
+    margin: 3px;
+}
