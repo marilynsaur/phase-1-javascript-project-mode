@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       data.forEach(train => createTrains(train))
     })
-
+// this functions renders the data and puts on the DOM
   function createTrains(data) {
     container = document.querySelector("#train-collection");
     console.log(container)
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(incrementCount)
     let count = data.likes;
 
-
+  //this function adds the likes
     const handleIncrement = () => {
       console.log(incrementCount)
       count++;
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
+//this function is where the user can add their own train on the database and it goes on the dom
   const inputForm = document.querySelector('form');
   console.log(inputForm)
 
