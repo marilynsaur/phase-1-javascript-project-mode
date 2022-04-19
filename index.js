@@ -2,7 +2,7 @@
 //This is where the trains loads up on the page
 document.addEventListener("DOMContentLoaded", () => {
   //this function adding the trains and fetching them to the DOM
-
+  
   fetch('http://localhost:3000/trains')
     .then(response => response.json())
     .then(data => {
@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
          </div>
        `
     container.appendChild(card);
-   
-   // trainLoads();
+
+    
 
     const totalCount = card.querySelector("p");
     const incrementCount = card.querySelector('.like-btn');
@@ -45,90 +45,75 @@ document.addEventListener("DOMContentLoaded", () => {
       totalCount.innerText = `${count} likes!`;
       console.log(count)
 
-    fetch(`http://localhost:3000/trains/${data.id}`, {
-      method: 'PATCH',
-      headers: {
+      fetch(`http://localhost:3000/trains/${data.id}`, {
+        method: 'PATCH',
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+
+        body: JSON.stringify({ likes: count })
+
+      })
+        .then(response => response.json())
+        .then(likesTrain => createTrains(likesTrain))
+
+    }
+    incrementCount.addEventListener("click", handleIncrement);
+
+    
+   
+  }
+ 
+
+
+
+
+
+  const inputForm = document.querySelector('form');
+  console.log(inputForm)
+
+  inputForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let trainObj = {
+      name: event.target.name.value,
+      image: event.target.image.value,
+      description: event.target.description.value,
+      likes: 0
+    }
+    createTrains(trainObj);
+
+    console.log(trainObj)
+    fetch('http://localhost:3000/trains', {
+      method: 'POST',
+      headers:
+      {
         "Content-Type": "application/json",
         Accept: "application/json"
       },
 
-      body: JSON.stringify({ likes: count })
-
+      body: JSON.stringify(trainObj)
     })
       .then(response => response.json())
-      .then(likesTrain => createTrains(likesTrain))
-
-  }
-  incrementCount.addEventListener("click", handleIncrement);
+      .then(newTrain => createTrains(newTrain))
 
 
-
-    // function patchTrains(train) {
-
-
-    // }
    
-  }
-
-
-
-
-
-  const trainLoads = () => {
-    const inputForm = document.querySelector('form');
-    const trainContainer = document.querySelector('#train-collection');
-    inputForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const input = document.querySelector('p');
-      function trainInput(e) {
-
-        function postTrains(train) {
-          let trainObj = {
-            name: e.target.name.value,
-            image: e.target.image.value,
-            description: e.target.description.value,
-            likes: 0
-          }
-
-          console.log(trainObj)
-          fetch('http://localhost:3000/trains', {
-            method: 'POST',
-            headers:
-            {
-              "Content-Type": "application/json",
-              Accept: "application/json"
-            },
-
-            body: JSON.stringify(trainObj)
-          })
-            .then(response => response.json())
-            .then(newTrain => createTrains(newTrain))
-
-      
-          createTrains(trainObj);
-        }
-
-        trainContainer.addEventListener('submit', trainInput);
-
-
-
-
-
-      }
-
-    })
-
-  }
-
-
-
-
-
-
-
-
-
+  })
 
 
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
