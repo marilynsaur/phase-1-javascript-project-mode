@@ -33,17 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 
-    const totalCount = card.querySelector("p");
+    //const totalCount = card.querySelector('');
     const incrementCount = card.querySelector('.like-btn');
     console.log(incrementCount)
     let count = data.likes;
 
-  //this function adds the likes
+  //this function adds the likes and puts on the DOM
     const handleIncrement = () => {
-      console.log(incrementCount)
+     // console.log(incrementCount)
       count++;
-      totalCount.innerText = `${count} likes!`;
-      console.log(count)
+      incrementCount.innerText = `${count} likes!`;
+     // console.log(count)
 
       fetch(`http://localhost:3000/trains/${data.id}`, {
         method: 'PATCH',
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       })
         .then(response => response.json())
-        .then(likesTrain => createTrains(likesTrain))
+        .then(likesTrain => console.log(likesTrain))
 
     }
     incrementCount.addEventListener("click", handleIncrement);
@@ -79,6 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
       name: event.target.name.value,
       image: event.target.image.value,
       description: event.target.description.value,
+      list: event.target.list.value,
+      fact: event.target.fact.value,
       likes: 0
     }
     createTrains(trainObj);

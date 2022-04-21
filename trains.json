@@ -2,12 +2,12 @@
   "trains": [
     {
       "id": 1,
-      "title": "SantaFe Train",
+      "title": "Santa fe train",
       "image": "file://wsl%24/Ubuntu/root/phase-1-javascript-project-mode/images%20for%20train%20game/santafe%20train.jpg",
       "description": "One of the most famous trains in the United States connected the Los Angles, California, and Chicago, Illinois.",
       "list": "Track length:13,115 miles (21,107 km),Freight carried:59,565,100 tons,Passengers carried:11,264,000",
       "fact": "Despite the name, its main railroad never served Santa Fe, New Mexico. This was because the terrain was too rough. A branch line from Lamy reached Santa Fe instead",
-      "likes": 16
+      "likes": 41
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "description": "The locomotives were 132 feet long and weighed 1.2 million pounds. Because of their great length, the frames of the Big Boys were hinged or articulated to allow them to negotiate curves.",
       "list": "Tender Type: 14-wheeled, Water Capacity:25,000 gallons,Fuel:Coal**56,000 lbs.",
       "fact": "Twenty-five Big Boys were built exclusively for Union Pacific Railroad, the first of which was delivered in 1941.",
-      "likes": 6
+      "likes": 19
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "description": "Amtrak is a passenger railroad service that provides medium and long-distance inter-city rail service in the contiguous United States and to nine cities in Canada",
       "list": "Track gauge:4 ft,Dates of operation: May 1, 1971 to present,Length:44 routes 21,400 miles route miles.",
       "fact": "Amtrak serves more than 500 destinations in 46 states and three Canadian provinces, operating more than 300 trains daily over 21,400 miles (34,000 km) of track",
-      "likes": 11
+      "likes": 14
     },
     {
       "id": 4,
@@ -61,7 +61,7 @@
       "description": "Beyond long-distance travel, some sections around the largest metropolitan areas are used as a commuter rail network.It is operated by five Japan Railways Group companies.",
       "list": "Longest length of Train: the longest trains are 400 m (1/4 mile) end to end,Length of train:Trains are up to sixteen cars long. With each car measuring 25 m (82 ft) in length",
       "fact": "The Shinkansen is very reliable thanks to several factors, including its near-total separation from slower traffic.",
-      "likes": 2
+      "likes": 7
     },
     {
       "id": 8,
@@ -79,7 +79,7 @@
       "description": "Eurostar is an international high-speed rail service connecting the United Kingdom with France, Belgium and the Netherlands.",
       "list": "Fleet size:12 Class 3731 Alstom TGV TMST e300 sets,Top Speed:200",
       "fact": "Most Eurostar trains travel through the Channel Tunnel between the United Kingdom and France",
-      "likes": 0
+      "likes": 4
     },
     {
       "id": 10,
@@ -88,7 +88,7 @@
       "description": "The Ghan is an experiential tourism oriented passenger train service that operates between the northern and southern coasts of Australia",
       "list": "Distance travelled:2,979 km,First service:1929",
       "fact": "The Ghan has been described as one of the world's great passenger trains.",
-      "likes": 0
+      "likes": 6
     },
     {
       "id": 11,
@@ -97,14 +97,7 @@
       "description": "The Hiawathas were a fleet of named passenger trains operated by the Chicago, Milwaukee, St. Paul and Pacific Railroad (also known as the Milwaukee Road) between Chicago and various destinations in the Midwest and Western United States.",
       "list": "Train line:The Chippewa began in May 1937",
       "fact": "The train was named for the epic poem The Song of Hiawatha by Henry Wadsworth Longfellow.",
-      "likes": 0
-    },
-    {
-      "name": "random",
-      "image": "file://wsl%24/Ubuntu/root/phase-1-javascript-project-mode/images%20for%20train%20game/amtrak%20train.JPG",
-      "description": "blah blah",
-      "likes": 0,
-      "id": 12
+      "likes": 10
     }
   ]
 }
