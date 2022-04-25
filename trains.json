@@ -2,7 +2,7 @@
   "trains": [
     {
       "id": 1,
-      "title": "Santa fe train",
+      "name": "Santa fe train",
       "image": "file://wsl%24/Ubuntu/root/phase-1-javascript-project-mode/images%20for%20train%20game/santafe%20train.jpg",
       "description": "One of the most famous trains in the United States connected the Los Angles, California, and Chicago, Illinois.",
       "list": "Track length:13,115 miles (21,107 km),Freight carried:59,565,100 tons,Passengers carried:11,264,000",
@@ -16,7 +16,7 @@
       "description": "The locomotives were 132 feet long and weighed 1.2 million pounds. Because of their great length, the frames of the Big Boys were hinged or articulated to allow them to negotiate curves.",
       "list": "Tender Type: 14-wheeled, Water Capacity:25,000 gallons,Fuel:Coal**56,000 lbs.",
       "fact": "Twenty-five Big Boys were built exclusively for Union Pacific Railroad, the first of which was delivered in 1941.",
-      "likes": 19
+      "likes": 22
     },
     {
       "id": 3,
@@ -98,6 +98,51 @@
       "list": "Train line:The Chippewa began in May 1937",
       "fact": "The train was named for the epic poem The Song of Hiawatha by Henry Wadsworth Longfellow.",
       "likes": 10
+    },
+    {
+      "name": "Jessie",
+      "image": "file://wsl%24/Ubuntu/root/phase-1-javascript-project-mode/images%20for%20train%20game/amtrak%20train.JPG",
+      "description": "blah blah",
+      "list": "mew mew",
+      "fact": "its a fact",
+      "likes": 0,
+      "id": 12
+    },
+    {
+      "name": "the bermina express",
+      "image": "file://wsl%24/Ubuntu/root/phase-1-javascript-project-mode/images%20for%20train%20game/amtrak%20train.JPG",
+      "description": "The most spectacular way to cross the Alps: the Bernina Express from Chur / St. Moritz - Valposchiavo - Tirano links up regions with different languages and cultures. This is not a rack railway and the train winds its way gently through splendid scenery. ",
+      "list": "mew mew",
+      "fact": "its a fact",
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "name": "santa fe",
+      "image": "file://wsl%24/Ubuntu/root/phase-1-javascript-project-mode/images%20for%20train%20game/amtrak%20train.JPG",
+      "description": "blah blah",
+      "list": "mew mew",
+      "fact": "its a fact",
+      "likes": 0,
+      "id": 14
+    },
+    {
+      "name": "santa fe",
+      "image": "file://wsl%24/Ubuntu/root/phase-1-javascript-project-mode/images%20for%20train%20game/amtrak%20train.JPG",
+      "description": "blah blah",
+      "list": "mew mew",
+      "fact": "its a fact",
+      "likes": 0,
+      "id": 15
+    },
+    {
+      "name": "Jessie",
+      "image": "file://wsl%24/Ubuntu/root/phase-1-javascript-project-mode/images%20for%20train%20game/amtrak%20train.JPG",
+      "description": "The most spectacular way to cross the Alps: the Bernina Express from Chur / St. Moritz - Valposchiavo - Tirano links up regions with different languages and cultures. This is not a rack railway and the train winds its way gently through splendid scenery. ",
+      "list": "mew mew",
+      "fact": "its a fact",
+      "likes": 0,
+      "id": 16
     }
   ]
 }

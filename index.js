@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch('http://localhost:3000/trains')
     .then(response => response.json())
     .then(data => {
-      console.log(data)
+     
 
       data.forEach(train => createTrains(train))
     })
 // this functions renders the data and puts on the DOM
   function createTrains(data) {
     container = document.querySelector("#train-collection");
-    console.log(container)
+   
     let card = document.createElement('div');
     card.innerHTML =
       `<div class="card">
@@ -33,17 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 
-    //const totalCount = card.querySelector('');
+    
     const incrementCount = card.querySelector('.like-btn');
     console.log(incrementCount)
     let count = data.likes;
 
   //this function adds the likes and puts on the DOM
     const handleIncrement = () => {
-     // console.log(incrementCount)
       count++;
       incrementCount.innerText = `${count} likes!`;
-     // console.log(count)
+
 
       fetch(`http://localhost:3000/trains/${data.id}`, {
         method: 'PATCH',
@@ -72,9 +71,21 @@ document.addEventListener("DOMContentLoaded", () => {
 //this function is where the user can add their own train on the database and it goes on the dom
   const inputForm = document.querySelector('form');
   console.log(inputForm)
-
+  //const nameInput = document.getElementById('fact');
+  //console.log(nameInput)
+   
   inputForm.addEventListener('submit', (event) => {
     event.preventDefault();
+   
+
+    //nameInput.value = '';
+    // const inputs = document.querySelectorAll('name, image, description, text,fact');
+    // console.log(inputs)
+    // inputs.forEach(input => {
+    //   input.value = '';
+    // });
+  
+   
     let trainObj = {
       name: event.target.name.value,
       image: event.target.image.value,
@@ -85,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     createTrains(trainObj);
 
-    console.log(trainObj)
+   
     fetch('http://localhost:3000/trains', {
       method: 'POST',
       headers:
@@ -100,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(newTrain => createTrains(newTrain))
 
 
-   
+      inputForm.reset();
   })
 
 
