@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       count++;
       incrementCount.innerText = `${count} likes!`;
 
-     
+     //this patch updates the likes using the id of the trains
       fetch(`http://localhost:3000/trains/${data.id}`, {
         method: 'PATCH',
         headers: {
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
    
 
-
+  //this function updates the server with a new train that the user creates from the form
     fetch('http://localhost:3000/trains', {
       method: 'POST',
       headers:
