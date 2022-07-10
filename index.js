@@ -2,19 +2,23 @@
 //This is where the trains loads up on the page
 document.addEventListener("DOMContentLoaded", () => {
   //this function adding the trains and fetching them to the DOM
-  
+
   fetch('http://localhost:3000/trains')
     .then(response => response.json())
-    .then(data => {
-     
+    .then(trainArray => {
 
-      data.forEach(train => createTrains(train))
+      
+      trainArray.forEach(train => createTrains(train))
+    
     })
-// this functions renders the data and puts on the DOM
+  // this functions renders the data and puts on the DOM
   function createTrains(data) {
-    container = document.querySelector("#train-collection");
+    
    
+    
+    let container = document.querySelector("#train-collection");
     let card = document.createElement('div');
+    //card.className("card");
     card.innerHTML =
       `<div class="card">
         <h2 class= "title">${data.name}</h2>
@@ -27,23 +31,25 @@ document.addEventListener("DOMContentLoaded", () => {
             <p class="fact">${data.fact}</p>
            
             <button class="like-btn" id=${data.id}>Like ❤️</button>
+            <button class="delete-train">🚂</button>
+
          </div>
        `
     container.appendChild(card);
 
-    
-
-    
+    card.querySelector('.delete-train').addEventListener('click',
+    () =>{ card.innerHTML=''
+    })
+   
     const incrementCount = card.querySelector('.like-btn');
-    console.log(incrementCount)
     let count = data.likes;
 
-  //this function adds the likes and puts on the DOM
+    //this function adds the likes and puts on the DOM
     const handleIncrement = () => {
       count++;
       incrementCount.innerText = `${count} likes!`;
 
-
+     
       fetch(`http://localhost:3000/trains/${data.id}`, {
         method: 'PATCH',
         headers: {
@@ -60,32 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     incrementCount.addEventListener("click", handleIncrement);
 
-    
-   
   }
- 
 
+  
 
-
-
-//this function is where the user can add their own train on the database and it goes on the dom
+  //this function is where the user can add their own train on the database and it goes on the dom
   const inputForm = document.querySelector('form');
-  console.log(inputForm)
-  //const nameInput = document.getElementById('fact');
-  //console.log(nameInput)
-   
   inputForm.addEventListener('submit', (event) => {
     event.preventDefault();
-   
-
-    //nameInput.value = '';
-    // const inputs = document.querySelectorAll('name, image, description, text,fact');
-    // console.log(inputs)
-    // inputs.forEach(input => {
-    //   input.value = '';
-    // });
-  
-   
     let trainObj = {
       name: event.target.name.value,
       image: event.target.image.value,
@@ -94,9 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
       fact: event.target.fact.value,
       likes: 0
     }
-    createTrains(trainObj);
-
    
+
+
     fetch('http://localhost:3000/trains', {
       method: 'POST',
       headers:
@@ -111,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(newTrain => createTrains(newTrain))
 
 
-      inputForm.reset();
+    inputForm.reset();
   })
 
 
